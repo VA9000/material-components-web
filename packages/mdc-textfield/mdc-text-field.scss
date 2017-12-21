@@ -81,6 +81,10 @@
       &::placeholder {
         @include mdc-theme-prop(color, $mdc-text-field-light-placeholder);
       }
+
+      ~ .mdc-text-field__label {
+        @include mdc-theme-prop(color, text-primary-on-light);
+      }
     }
 
     // Remove red outline on firefox
@@ -103,6 +107,10 @@
 
       &:focus::placeholder {
         @include mdc-theme-prop(color, $mdc-text-field-dark-placeholder);
+      }
+
+      &:focus ~ .mdc-text-field__label {
+        @include mdc-theme-prop(color, text-primary-on-dark);
       }
     }
   }
